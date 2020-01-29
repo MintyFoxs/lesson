@@ -1,0 +1,9 @@
+type: "material"      //тип (resource или material), различия в том, что material можно загрузить в ядро, а resource нельзя
+name: "galaxy"   //название
+description: "galaxy" //описание
+color: 39094f         //цвет
+hardness: 3           //твёрдость
+cost: 1               //значение, которое добавляется ко времени строительства блока из этого ресурса (1=1тик)
+explosiveness: 0      //взрывоопасность
+flammability: 0       //воспламеняемость
+radioactivity: 0      //радиоактивность 1-да 0-нет

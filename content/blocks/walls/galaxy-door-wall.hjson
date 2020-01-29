@@ -1,0 +1,30 @@
+name: "galaxy-door-wall"       //название
+description: "galaxy"          //описание
+type: "door"                   //тип
+solid: false                   //твёрдость
+destructible: true             //разрушаемость
+buildCostMultiplier: 5         //для вычесления скорости строительства
+update: true                   //имеет ли этот блок объект плитки, который обновляется
+variants: 0                    //варианты
+unloadable: false              //работают ли на этом блоки разгрузчики
+solidifes: true                //может ли быть твердым
+rotate: false                  //можно ли вращать
+breakable: true                //можно ли сломать правым кликом
+placeableOn: false             //можно ли на этом полу разместиться
+insulated: false               //обладает изоляцией
+health: 893                    //здоровье
+baseExplosiveness: 0           //взрывоопасность
+floating: true                 //можно ли разместить на воде
+size: 1                        //размер
+alwaysReplace: true            //может ли этот блок быть заменён во всех случаях
+group: "walls"                 //замена блоков одной группы
+priority: "base"               //приоритет на уничтожение блока врагами
+targetable: true               //нацелены ли враги на этот блок
+requirements: [
+galaxy/25
+]                              //стоимость строительства
+category: "defense"            //категория
+openFx: "dooropen"             //эффект открытия двери
+closeFs: "doorclose"           //эффект закрытия двери
+consumesTap: true              //реакция на нажатие
+research: galaxy-wall

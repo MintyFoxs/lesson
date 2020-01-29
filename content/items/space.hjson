@@ -1,0 +1,7 @@
+type: "resource"      //тип (resource или material), различия в том, что material можно загрузить в ядро, а resource нельзя
+name: "space"   //название
+description: "galaxy" //описание
+color: 39094f         //цвет
+explosiveness: 0      //взрывоопасность
+flammability: 0       //воспламеняемость
+radioactivity: 1      //радиоактивность 1-да 0-нет

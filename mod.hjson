@@ -1,0 +1,6 @@
+name: "Lesson"                           //название мода
+displayName: "[#58FFCB]lesson[blue] Mod" //название мода которое будет отображаться в меню
+author: "[#58FFCB]Linux Mint"            //автор
+description: "Lesson Mods"               //описание
+version: "[#8D00FFFC]3.0.hack"           //версия мода
+minGameVersion: "101"                    //минимальная версия мода

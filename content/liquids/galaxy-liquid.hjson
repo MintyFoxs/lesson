@@ -1,0 +1,11 @@
+name: "galaxy-liquid"                 //название
+description: "galaxy"                 //описание
+type: "liquid"                        //тип
+color: 39094f                         //цвет
+barColor: 39094f                      //цвет в баре
+lightColor: 39094f25                  //цвет для рисования огней
+flammability: 0                       //воспломеняемость  (0-не воспламеняемый 1-полностью воспламеняемый)
+temperature: 0                        //температура       (0,5-комнатная температура 0-очень холодная 1-горячая)
+viscosity: 0.5                        //используется для охлаждения (вода-0,4 криожидкость-0,9)
+explosiveness: 0                      //взрывоопасность при нагревании (0-ничто 1-ядерная бомба)
+effect: "melting"                     //эффект жидкости   (основные эффекты:none,burling,freezing,wet,melting,tarred,overdrive,shielded,boss,shocked,corroded)

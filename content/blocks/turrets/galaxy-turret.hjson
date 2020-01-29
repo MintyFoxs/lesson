@@ -1,0 +1,108 @@
+name: "galaxy-turret"          //название
+description: "galaxy"          //описание
+type: "itemTurret"             //тип
+solid: true                    //твёрдость
+destructible: true             //разрушаемость
+buildCostMultiplier: 5         //вычисление скорости строительства
+update: true                   //имеет ли этот блок объект плитки, который обновляется
+variants: 0                    //варианты
+unloadable: false              //работают ли на этом блоки разгрузчики
+solidifes: true                //может ли быть твердым
+rotate: false                  //можно ли вращать
+breakable: true                //можно ли сломать правым кликом
+placeableOn: false             //можно ли на этом полу разместиться
+insulated: false               //обладает изоляцией
+health: 893                    //здоровье
+baseExplosiveness: 0           //взрывоопасность
+floating: true                 //можно ли разместить на воде
+size: 2                        //размер
+alwaysReplace: true            //может ли этот блок быть заменён во всех случаях
+group: "turrets"                 //замена блоков одной группы
+priority: "turret"             //приоритет на уничтожение блока врагами
+targetable: true               //нацелены ли враги на этот блок
+requirements: [
+galaxy/25
+]                              //стоимость строительства
+category: "turret"             //категория
+heatColor: 39094f              //цвет спрайта name-heat
+shootEffect: "none"            //эффект, произведенный на плитке в направлении, в которое нацелена башня, когда она стреляет.
+smokeEffect: "none"            //Эффект, произведенный на плитке в направлении, в которое нацелена башня, когда она стреляет.
+ammoUseEffect: "none"          //Эффект выстрела по плитке, когда боеприпасы израсходованы.
+shootSound: "shoot"            //Звук, создаваемый турелью при выстреле пули.
+ammoPerShoot: 1                //количество партонов, израсходованое за раз
+ammoEjectBack: 90              //угол выброса патронов
+range: 200                     //радиус выстрелов        (1 блок = 8), в данном случае стоит 25 блоков радиус
+reload: 15                     //Количество тиков, необходимое для перезагрузки
+inaccuracy: 2                  //степень неточности
+shots: 2                       //количество пуль выброшенное за раз
+spread: 20                     //угловой разброс
+recoil: 1.25                   //отдача башни при выстреле
+restitution: 0.03              //время восстановления от отдачи после выстрела
+cooldown: 0.003                //количество времени, чтобы спрайт name-heat стал прозрачным
+rotatespeed: 5                 //скорость вращения
+shootCone: 8                   //Угол, используемый для определения того, должна ли башня стрелять.
+xRand: 0                       //Случайный множитель   оси x, чтобы пули появлялись из нескольких мест
+targetAir: true                //может ли поражать воздушные цели
+targetGround: true             //может ли поражать наземные цели
+maxAmmo: 20                    //максимальное количество патронов
+ammo: {
+  copper: standardCopper
+  galaxy: {
+    type: "BasicBulletType"  //тип пули
+    damage: 6                  //урон пули
+    lifetime: 1500             //количество тиков пуля продержится
+    speed: 1000                //скорость пули
+    hitSize: 4                 //радиус столкновения
+    drawSize: 40
+    drag: 0                    //замедление за тик
+    pierce: true               //может ли столкнуться
+    hitEffect: "hitFuse"          //создается, когда пуля попадает во что-то
+    despawnEffect: "lava"         //создано, когда пуля отчаивается
+    shookEffect: "landShock"      //создается при съемке
+    smookeEffect: "fireballsmoke" //создается при съемке
+    hitSound: "none"              //сделано при ударе о что-то или удалении
+    inaccuracy: 1                 //дополненая не точность
+    ammoMultiplier: 2             //сколько пуль создается на предмет / жидкость
+    reloadMultiplier: 1           //умноженая на скорость туррель
+    recoil: 1                     //отдача
+    hitTiles: true                //попадает ли пуля в плитку
+    status: "freezing"            //эффект при попадании
+    statusDuraton: 600            //Интенсивность применяемого статусного эффекта в терминах длительности.
+    splashDamage: 4               //урон по нескольим целям в радиусе
+    bulletWidth: 5
+    bulletHeight: 7               //размеры пули
+    bulletShrink: 0.5             //Используется для хлюпания пули, когда она приближается к цели, где 0-это не сокращение -0,5 растягивается и 0,5 сжимается.
+    frontColor: 39094f            //цвет переднего спрайта
+    backColor: 39034f             //цвет заднего спрайта
+    BulletSprite: "bullet"        //спрайт пули
+  }
+    space: {
+    type: MissileBulletType
+    lifetime: 1000
+    speed: 2
+    splashDamageRadius: 2
+    splashDamage: 9
+    frontColor: 39034f
+    backColor: 13034f33
+    homingPower: 1
+    homingRange: 20
+    fragBullets: 3
+    damage: 15
+    fragBullet: {
+        type: LiquidBulletType
+        liquid: galaxy-liquid
+        lifetime: 2
+        speed: 1
+        fragBullets: 2
+        fragBullet: {
+            type: LiquidBulletType
+            liquid: water
+            lifetime: 1
+            speed: 2
+            damage: 1
+        }
+    }
+}
+}                              //виды патронов и урон каждого патрона
+hasItem: true                  //могут ли входить предметы
+research: core-shard

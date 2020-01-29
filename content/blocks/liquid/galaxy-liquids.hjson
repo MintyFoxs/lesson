@@ -1,0 +1,12 @@
+type: "floor"                   //тип
+name: "galaxy-liquid"           //название
+description: "galaxy"           //описание
+speedMultuplier: 0.3            //скорость добычи
+variants: 0                     //варианты
+status: "wet"                   //эффект
+statusDuration: 180             //интенсивность
+liquidDrop: "galaxy-liquid"     //жидкость которая будет выходить
+drownTime: 5                    //время для того, чтобы утонуть
+hasShadow: false                //есть ли тень
+oreDefault: true                //генирируется ли на картах рандомно
+playerUnmineable: true          //игрок не может добывать (true - не может, false - может)
